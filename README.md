@@ -116,7 +116,7 @@ If you read this as a README, you already have the boiler plate. This is a Maven
  - Don't excuse yourself. Make code you can stand for. That is what we will judge you on in the end, right?
  - But most importantly, enjoy the coding and have fun!
 
-Good luck, may Godspeed be with You!
+Good luck, Godspeed to You!
 
 
  
