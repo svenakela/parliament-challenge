@@ -8,6 +8,7 @@ import com.parliamentchallenge.merger.model.Speeches;
 import com.parliamentchallenge.merger.model.SpeechesWrapper;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 public final class DataProvider {
 
@@ -24,6 +25,10 @@ public final class DataProvider {
         .map(SpeechesWrapper::unwrap)
         .map(Speeches::getSpeeches)
         .flatMapMany(Flux::fromIterable)
+        .parallel()
+        .runOn(Schedulers.parallel())
+        .log()
+        .sequential()
         .flatMap(s -> Flux.concat(mergeSpeech(s)));
   }
 
