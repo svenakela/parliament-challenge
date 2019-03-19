@@ -110,9 +110,10 @@ If you read this as a README, you already have the boiler plate. This is a Maven
 
 ## What do we Expect From you
 
- - Spend 4-6 hours on the task. 
- - As a bare minimum we want to be able to send a request and get a response with the merged data. 
- - What would you do to deploy this in a production environment? If there are things you want to add but you run out of time, please document your thoughts somehow! 
+ - Spend an evening on the task
+ - As a bare minimum we want to be able to send a request and get a response with the merged data
+ - If there are things you want to add but you run out of time, please document your thoughts somehow!
+ - What would you do or like to add to deploy this in a production environment?  
  - Don't excuse yourself. Make code you can stand for. That is what we will judge you on in the end, right?
  - But most importantly, enjoy the coding and have fun!
 
