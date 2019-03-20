@@ -27,9 +27,9 @@ public final class DataProvider {
         .flatMapMany(Flux::fromIterable)
         .parallel()
         .runOn(Schedulers.parallel())
+        .flatMap(s -> Flux.concat(mergeSpeech(s)))
         .log()
-        .sequential()
-        .flatMap(s -> Flux.concat(mergeSpeech(s)));
+        .sequential();
   }
 
   private Mono<PersonWrapper> getPersonWhoSpoke(final SpeechTemplate speech) {
