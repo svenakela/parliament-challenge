@@ -27,7 +27,7 @@ public final class DataProvider {
         .flatMapMany(Flux::fromIterable)
         .parallel()
         .runOn(Schedulers.parallel())
-        .flatMap(s -> Flux.concat(mergeSpeech(s)))
+        .flatMap(this::mergeSpeech)
         .log()
         .sequential();
   }
